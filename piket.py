@@ -661,6 +661,7 @@ def run_multi_simulation():
         st.markdown("### 📋 Tabel Perbandingan Skenario")
         df_compare = pd.DataFrame(results_list)
         
+        # PERBAIKAN: Format spesifik per kolom
         styled_df = df_compare.style.background_gradient(cmap='YlOrRd', subset=['durasi'])
         styled_df = styled_df.format({
             'durasi': '{:.1f}',
@@ -916,7 +917,15 @@ def show_analysis_tab(results, model, df):
             ]
         })
         
-        st.dataframe(wait_stats.style.format("{:.2f}"), use_container_width=True)
+        # PERBAIKAN: Format spesifik per kolom
+        st.dataframe(
+            wait_stats.style.format({
+                'Lauk': '{:.2f}',
+                'Angkat': '{:.2f}',
+                'Nasi': '{:.2f}'
+            }),
+            use_container_width=True
+        )
     
     with col2:
         st.markdown("#### Waktu Layanan (detik)")
@@ -939,7 +948,15 @@ def show_analysis_tab(results, model, df):
             ]
         })
         
-        st.dataframe(service_stats.style.format("{:.2f}"), use_container_width=True)
+        # PERBAIKAN: Format spesifik per kolom
+        st.dataframe(
+            service_stats.style.format({
+                'Lauk': '{:.2f}',
+                'Angkat': '{:.2f}',
+                'Nasi': '{:.2f}'
+            }),
+            use_container_width=True
+        )
     
     # Kesimpulan
     st.markdown("### 📌 Kesimpulan")
