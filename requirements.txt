@@ -1,0 +1,17 @@
+# Core libraries
+streamlit>=1.28.0
+simpy>=4.0.1
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Visualization
+matplotlib>=3.7.0
+plotly>=5.17.0
+
+# Utilities
+python-dateutil>=2.8.2
+typing-extensions>=4.5.0
+dataclasses>=0.6
+
+# Optional for better performance
+pillow>=10.0.0
