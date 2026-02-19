@@ -1,17 +1,38 @@
+# ============================
+# DEPENDENCIES SIMULASI PIKET IT DEL
+# ============================
+
 # Core libraries
-streamlit>=1.28.0
-simpy>=4.0.1
-numpy>=1.24.0
-pandas>=2.0.0
+streamlit==1.28.0
+simpy==4.0.1
+numpy==1.24.3
+pandas==2.0.3
 
 # Visualization
-matplotlib>=3.7.0
-plotly>=5.17.0
+plotly==5.15.0
 
-# Utilities
-python-dateutil>=2.8.2
-typing-extensions>=4.5.0
-dataclasses>=0.6
+# Date/time handling
+python-dateutil==2.8.2
+pytz==2023.3
 
-# Optional for better performance
-pillow>=10.0.0
+# Data processing
+scipy==1.11.1
+
+# Optional but recommended for better performance
+numba==0.57.0
+
+# ============================
+# VERSI ALTERNATIF (Jika versi spesifik tidak bisa diinstall)
+# ============================
+
+# Gunakan ini jika mengalami konflik versi:
+"""
+streamlit>=1.20.0
+simpy>=4.0.0
+numpy>=1.21.0
+pandas>=1.5.0
+plotly>=5.10.0
+python-dateutil>=2.8.0
+pytz>=2020.0
+scipy>=1.7.0
+"""
